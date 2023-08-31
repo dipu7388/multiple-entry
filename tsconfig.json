@@ -4,14 +4,23 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "config": [
-        "dist/config"
+      "@config/*": [
+        "projects/config/src/*"
       ],
-      "core": [
-        "dist/core"
+      "@config": [
+        "projects/config/src"
       ],
-      "multi-entry": [
-        "dist/multi-entry"
+      "@core": [
+        "projects/core/src"
+      ],
+      "@core/*": [
+        "projects/core/src/*"
+      ],
+      "@multi-entry/*": [
+        "projects/multi-entry/*"
+      ],
+      "@multi-entry": [
+        "projects/multi-entry/src"
       ]
     },
     "outDir": "./dist/out-tsc",
