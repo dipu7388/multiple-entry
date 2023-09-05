@@ -79,8 +79,9 @@ module.exports = {
           test: /projects[\\/](core|config|multi-entry)[\\/]/,
           name: (module, chunks, cacheGroupKey) => {
             const moduleFileName = module.identifier().split('/').reduceRight((item) => item);
-            const allChunksNames = chunks.map((item) => item.name).join('_');
-           return [cacheGroupKey,allChunksNames,moduleFileName].filter(x=>x).join('_')
+            const allChunksNames = chunks.map((item) => item.name).filter(x=>x).join('_');
+            console.log([cacheGroupKey,allChunksNames,moduleFileName])
+           return [cacheGroupKey,allChunksNames,moduleFileName.replace('.ts', '')].filter(x=>x).join('_')
           },
           chunks: 'all',
           enforce: false
