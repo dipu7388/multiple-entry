@@ -83,7 +83,6 @@ sharedMappings: [
   "@core",
   "@config",
   "@multi-entry",
-  "@multi-entry",
   "@multi-entry/*"
 ]
 });

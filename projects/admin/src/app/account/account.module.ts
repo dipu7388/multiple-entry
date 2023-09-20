@@ -5,7 +5,6 @@ import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
-    AccountComponent
   ],
   imports: [
     CommonModule,
@@ -13,7 +12,8 @@ import { RouterModule } from '@angular/router';
       path: '',
       component: AccountComponent,
       pathMatch: 'full',
-    }])
+    }]),
+    AccountComponent
   ]
 })
 export class AccountModule { }
