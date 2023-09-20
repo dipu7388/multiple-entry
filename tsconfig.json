@@ -15,11 +15,17 @@
       "@core/*": [
         "projects/core/src/*"
       ],
+      // "@multi-entry/l3-components": [
+      //   "projects/multi-entry/l3-components"
+      // ],
+      // "@multi-entry/button": [
+      //   "projects/multi-entry/button"
+      // ],
       "@multi-entry/*": [
         "projects/multi-entry/*"
       ],
       "@multi-entry": [
-        "projects/multi-entry/src"
+        "projects/multi-entry/src",
       ]
     },
     "outDir": "./dist/out-tsc",

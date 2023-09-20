@@ -5,7 +5,7 @@ module.exports = withModuleFederationPlugin({
   name: 'admin',
 
   exposes: {
-    './Component': './projects/admin/src/app/app.component.ts',
+    './MfWrapperModule': './projects/admin/src/app/mf-wrapper/mf-wrapper.module.ts',
   },
 
   shared: {
