@@ -6,6 +6,7 @@ import { ConfigModule } from '@config';
 import { CoreModule } from '@core';
 import { MultiEntryModule } from '@multi-entry';
 import { NgModule } from '@angular/core';
+import { TestComponent } from './test/test.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { NgModule } from '@angular/core';
     CoreModule,
     ConfigModule,
     MultiEntryModule,
+    TestComponent
     // ButtonComponent
   ],
   providers: [],

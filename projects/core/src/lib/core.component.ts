@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'lib-core',
   template: `
     <p>
-      core works!
+      core works! Bhai
     </p>
   `,
   styles: [
