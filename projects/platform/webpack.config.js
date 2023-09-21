@@ -83,33 +83,31 @@ sharedMappings: [
   "@core",
   "@config",
   "@multi-entry",
-  "@multi-entry/*"
+  "@multi-entry/l3-components",
+  "@multi-entry/button",
 ]
 });
-// webpackConfig.resolve.alias['@multi-entry$']=webpackConfig.resolve.alias['@multi-entry'];
-// webpackConfig.resolve.alias['@multi-entry$']=webpackConfig.resolve.alias['@multi-entry$'].replace('src/', '');
-// delete webpackConfig.resolve.alias['@multi-entry'];
-// console.log('alias',webpackConfig);
+
 module.exports = {
   ...webpackConfig,
-  optimization: {
-    splitChunks: {
-      cacheGroups: {
-        default: false,
-        vendors: false,
-        lib: {
-          test: /projects[\\/](core|config|multi-entry)[\\/]/,
-          name: (module, chunks, cacheGroupKey) => {
-            const moduleFileName = module.identifier().split('/').reduceRight((item) => item);
-            const allChunksNames = chunks.map((item) => item.name).filter(x=>x).join('_');
-            // console.log([cacheGroupKey,allChunksNames,moduleFileName])
-           return [cacheGroupKey,allChunksNames,moduleFileName.replace('.ts', '')].filter(x=>x).join('_')
-          },
-          chunks: 'all',
-          enforce: true
-        }
+  // optimization: {
+  //   splitChunks: {
+  //     cacheGroups: {
+  //       default: false,
+  //       vendors: false,
+  //       lib: {
+  //         test: /projects[\\/](core|config|multi-entry)[\\/]/,
+  //         name: (module, chunks, cacheGroupKey) => {
+  //           const moduleFileName = module.identifier().split('/').reduceRight((item) => item);
+  //           const allChunksNames = chunks.map((item) => item.name).filter(x=>x).join('_');
+  //           // console.log([cacheGroupKey,allChunksNames,moduleFileName])
+  //          return [cacheGroupKey,allChunksNames,moduleFileName.replace('.ts', '')].filter(x=>x).join('_')
+  //         },
+  //         chunks: 'all',
+  //         enforce: true
+  //       }
 
-      },
-    },
-  },
+  //     },
+  //   },
+  // },
 };

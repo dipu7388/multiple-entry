@@ -15,7 +15,8 @@ const config = withModuleFederationPlugin({
     "@core",
     "@config",
     "@multi-entry",
-    "@multi-entry/*"
+    "@multi-entry/l3-components",
+  "@multi-entry/button",
   ],
 
 });
