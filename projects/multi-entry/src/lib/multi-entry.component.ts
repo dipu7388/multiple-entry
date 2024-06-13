@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
@@ -8,7 +9,9 @@ import { Component } from '@angular/core';
     </p>
   `,
   styles: [
-  ]
+  ],
+  standalone: true,
+  imports: [CommonModule]
 })
 export class MultiEntryComponent {
 
