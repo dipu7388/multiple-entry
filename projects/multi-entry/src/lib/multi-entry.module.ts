@@ -1,13 +1,9 @@
-import { NgModule } from '@angular/core';
 import { MultiEntryComponent } from './multi-entry.component';
-
-
+import { NgModule } from '@angular/core';
 
 @NgModule({
-  declarations: [
-    MultiEntryComponent
-  ],
   imports: [
+    MultiEntryComponent
   ],
   exports: [
     MultiEntryComponent

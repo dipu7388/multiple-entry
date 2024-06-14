@@ -3,17 +3,11 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "@config/*": [
-        "projects/config/src/*"
-      ],
       "@config": [
-        "projects/config/src"
+        "projects/config"
       ],
       "@core": [
-        "projects/core/src"
-      ],
-      "@core/*": [
-        "projects/core/src/*"
+        "projects/core"
       ],
       "@multi-entry/l3-components": [
         "projects/multi-entry/l3-components"
@@ -21,11 +15,8 @@
       "@multi-entry/button": [
         "projects/multi-entry/button"
       ],
-      "@multi-entry/*": [
-        "projects/multi-entry/*"
-      ],
       "@multi-entry": [
-        "projects/multi-entry/src/",
+        "projects/multi-entry",
       ]
     },
     "outDir": "./dist/out-tsc",
@@ -55,4 +46,8 @@
     "strictInputAccessModifiers": true,
     "strictTemplates": true
   }
+  // ,
+//   "exclude": [
+//     "**/*.spec.ts"
+// ]
 }
