@@ -115,7 +115,9 @@
 			"architect": {
 				"build": {
 					"builder": "@angular-architects/native-federation:build",
-					"options": {},
+					"options": {
+            "polyfills": []
+					},
 					"configurations": {
 						"production": {
 							"target": "platform:esbuild:production"
@@ -128,18 +130,12 @@
 					"defaultConfiguration": "production"
 				},
 				"serve": {
-					"builder": "@angular-architects/native-federation:build",
+          "builder": "@angular-architects/native-federation:build",
 					"options": {
 						"target": "platform:serve-original:development",
 						"rebuildDelay": 0,
 						"dev": true,
-						"port": 0
-					}
-				},
-				"extract-i18n": {
-					"builder": "ngx-build-plus:extract-i18n",
-					"options": {
-						"browserTarget": "platform:build"
+						"open": false
 					}
 				},
 				"test": {
@@ -164,7 +160,10 @@
 				"esbuild": {
 					"builder": "@angular-devkit/build-angular:application",
 					"options": {
-						"outputPath": "dist/platform",
+						"outputPath": {
+							"browser": "",
+							"base": "dist/platform"
+						},
 						"index": "projects/platform/src/index.html",
 						"polyfills": [
 							"zone.js",
@@ -184,6 +183,7 @@
 					},
 					"configurations": {
 						"production": {
+							"baseHref": "/",
 							"budgets": [
 								{
 									"type": "initial",
@@ -202,13 +202,15 @@
 							"optimization": false,
 							"extractLicenses": false,
 							"sourceMap": true,
-							"namedChunks": true
+							"namedChunks": true,
+							"baseHref": "/",
+							"verbose": true
 						}
 					},
 					"defaultConfiguration": "production"
 				},
 				"serve-original": {
-					"builder": "ngx-build-plus:dev-server",
+          "builder": "@angular-devkit/build-angular:dev-server",
 					"configurations": {
 						"production": {
 							"buildTarget": "platform:esbuild:production"
@@ -238,7 +240,9 @@
 			"architect": {
 				"build": {
 					"builder": "@angular-architects/native-federation:build",
-					"options": {},
+					"options": {
+						"polyfills": []
+					},
 					"configurations": {
 						"production": {
 							"target": "admin:esbuild:production"
@@ -255,8 +259,7 @@
 					"options": {
 						"target": "admin:serve-original:development",
 						"rebuildDelay": 0,
-						"dev": true,
-						"port": 0
+						"dev": true
 					}
 				},
 				"extract-i18n": {
@@ -331,7 +334,7 @@
 					"defaultConfiguration": "production"
 				},
 				"serve-original": {
-					"builder": "ngx-build-plus:dev-server",
+					"builder": "@angular-devkit/build-angular:dev-server",
 					"configurations": {
 						"production": {
 							"buildTarget": "admin:esbuild:production"

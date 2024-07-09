@@ -4,19 +4,19 @@
     "baseUrl": "./",
     "paths": {
       "@config": [
-        "projects/config"
+        "projects/config/src/public-api.ts"
       ],
       "@core": [
-        "projects/core"
+        "projects/core/src/public-api.ts"
       ],
       "@multi-entry/l3-components": [
-        "projects/multi-entry/l3-components"
+        "projects/multi-entry/l3-components/src/public_api.ts"
       ],
       "@multi-entry/button": [
-        "projects/multi-entry/button"
+        "projects/multi-entry/button/public-api.ts"
       ],
       "@multi-entry": [
-        "projects/multi-entry",
+        "projects/multi-entry/src/public-api.ts",
       ]
     },
     "outDir": "./dist/out-tsc",

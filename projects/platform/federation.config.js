@@ -11,17 +11,19 @@ module.exports = withNativeFederation({
     'rxjs/fetch',
     'rxjs/testing',
     'rxjs/webSocket',
-    // '@angular/core',
-    // '@angular/common',
-    // '@angular/platform-browser',
-    // '@angular/platform-browser-dynamic',
-    // '@angular/router',
-    // '@config',
-    // '@core',
-    // '@multi-entry',
-    // '@multi-entry/l3-components',
-    // '@multi-entry/button',
+    '@angular/platform-browser/animations',
+    '@angular/animations',
+    '@angular/animations/browser',
+    '@angular/platform-browser/animations/async',
+    '@angular/core/rxjs-interop',
     // Add further packages you don't need at runtime
+  ],
+  sharedMappings: [
+    '@config',
+    '@core',
+    '@multi-entry',
+    '@multi-entry/button',
+    '@multi-entry/l3-components'
   ]
 
   // Please read our FAQ about sharing libs:

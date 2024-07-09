@@ -1,6 +1,6 @@
 import { RouterLink, RouterOutlet } from '@angular/router';
 
-import { CommonModule } from '@angular/common';
+
 import { Component } from '@angular/core';
 
 @Component({
@@ -9,10 +9,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
   standalone: true,
   imports: [
-    CommonModule,
     RouterOutlet,
-    RouterLink,
-  ],
+    RouterLink
+],
 
 })
 export class AppComponent {
