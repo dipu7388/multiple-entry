@@ -17,6 +17,11 @@ module.exports = withNativeFederation({
     'rxjs/fetch',
     'rxjs/testing',
     'rxjs/webSocket',
+    '@angular/platform-browser/animations',
+    '@angular/animations',
+    '@angular/animations/browser',
+    '@angular/platform-browser/animations/async',
+    '@angular/core/rxjs-interop',
     // '@angular/core'
     // Add further packages you don't need at runtime
   ]
