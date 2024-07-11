@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "run:all": "node node_modules/@angular-architects/module-federation/src/server/mf-dev-server.js"
+    "run:all": "node node_modules/@angular-architects/module-federation/src/server/mf-dev-server.js",
+    "postinstall": "node node_modules/@angular-architects/native-federation/src/patch-angular-build.js"
   },
   "private": true,
   "dependencies": {
@@ -25,7 +26,7 @@
     "zone.js": "~0.14.7"
   },
   "devDependencies": {
-    "@angular-architects/native-federation": "^17.1.8",
+    "@angular-architects/native-federation": "^18.0.2",
     "@angular-devkit/build-angular": "^18.1.0",
     "@angular/cli": "~18.1.0",
     "@angular/compiler-cli": "^18.1.0",
