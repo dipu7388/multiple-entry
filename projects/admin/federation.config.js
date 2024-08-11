@@ -5,7 +5,7 @@ module.exports = withNativeFederation({
   name: 'admin',
   filename: 'remoteEntry.js',
   exposes: {
-    './Component': './projects/admin/src/app/app.component.ts',
+    './Component': './projects/admin/src/bootstrap.ts',
   },
 
   shared: {
