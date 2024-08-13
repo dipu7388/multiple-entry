@@ -11,5 +11,4 @@ import { LibShareModule } from '../local-share/local-share.module';
   styleUrls: ['./demo2.component.css']
 })
 export class Demo2Component {
-
 }
