@@ -9,5 +9,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./local-share.component.scss']
 })
 export class LocalShareComponent {
-
 }
